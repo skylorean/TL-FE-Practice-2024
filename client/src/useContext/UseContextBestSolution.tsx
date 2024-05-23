@@ -1,7 +1,7 @@
 import { FC, useContext } from 'react';
 import { UserContext } from './UserContext';
 
-export const NavigationFixed: FC = () => {
+export const NavigationFixedBest: FC = () => {
   return (
     <div style={{ backgroundColor: 'lightblue', padding: 10, width: 700 }}>
       <NavigationMenu />

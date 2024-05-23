@@ -3,11 +3,11 @@ export interface CharacterState {
   name: string;
 }
 
-interface Action {
+interface CharacterAction {
   type: 'INCREMENT_AGE' | 'DECREMENT_AGE' | 'LOWER_CASE_NAME' | 'UPPER_CASE_NAME';
 }
 
-export function characterReducer(state: CharacterState, action: Action) {
+export function characterReducer(state: CharacterState, action: CharacterAction) {
   const { type } = action;
 
   switch (type) {

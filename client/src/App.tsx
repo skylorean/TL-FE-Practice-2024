@@ -1,10 +1,18 @@
 import './App.css';
-import { UseStateExample1, UseStateExample2, UseStateExample3 } from './useState/UseStateExample';
-import { UseRefExample1, UseRefExample2, UseRefExample3 } from './useRef/UseRefExample1';
+
+import { useState } from 'react';
+
+import UseStateBaseExample from './useState/UseStateBaseExample';
+import { UserContext } from './useContext/UserContext';
+import UseStateLazyInit from './useState/UseStateLazyInit';
 import { Navigation } from './useContext/UseContextProblem';
 import { NavigationFixed } from './useContext/UseContextSolutionPropsDrilling';
-import { UserContext } from './useContext/UserContext';
-import { useState } from 'react';
+import UseStatePrevValue from './useState/UseStatePrevValue';
+import UseStateBest from './useState/UseStateBest';
+import UseRefExample1 from './useRef/UseRefExample1';
+import UseRefExample2 from './useRef/UseRefExample2';
+import UseRefExample3 from './useRef/UseRefExample3';
+import { NavigationFixedBest } from './useContext/UseContextBestSolution';
 import UseReducerExample from './useReducer/UseReducerExample';
 
 function App() {
@@ -14,26 +22,34 @@ function App() {
   };
 
   return (
-    <UserContext.Provider value={{ isLoggedIn, toggleLogin }}>
+    <>
       <main>
         {/* === UseState === */}
-        {/* <UseStateExample1 /> */}
-        {/* <UseStateExample2 /> */}
-        {/* <UseStateExample3 /> */}
+        {/* <UseStateBaseExample /> */}
+        {/* <UseStateLazyInit /> */}
+        {/* <UseStatePrevValue /> */}
+        {/* <UseStateBest /> */}
 
         {/* === UseRef === */}
         {/* <UseRefExample1 /> */}
         {/* <UseRefExample2 /> */}
         {/* <UseRefExample3 /> */}
 
-        {/* === UseContext === */}
+        {/* === UseContext ===  */}
         {/* <Navigation /> */}
         {/* <NavigationFixed /> */}
 
         {/* === useReducer === */}
-        <UseReducerExample />
+        {/* <UseReducerExample /> */}
       </main>
-    </UserContext.Provider>
+
+      {/* === UseContext ===  */}
+      {/* <UserContext.Provider value={{ isLoggedIn, toggleLogin }}>
+        <main>
+          <NavigationFixedBest />
+        </main>
+      </UserContext.Provider> */}
+    </>
   );
 }
 
