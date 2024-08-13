@@ -16,6 +16,7 @@ function useCounter(intervalTime: number = 1000) {
       clearInterval(timerId);
     };
   }, []);
+
   return count;
 }
 

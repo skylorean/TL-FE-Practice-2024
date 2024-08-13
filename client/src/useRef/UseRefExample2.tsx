@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 
 // Instead of useState
+// UseRef as a storage
 const UseRefExample2 = () => {
   const ref = useRef(0);
   const [count, setCount] = useState(0);
@@ -18,8 +19,8 @@ const UseRefExample2 = () => {
 
   return (
     <>
-      <button onClick={handleRefClick}>Click me!</button>
-      <button onClick={handleStateClick}>Click me!</button>
+      <button onClick={handleRefClick}>Click me! USEREF</button>
+      <button onClick={handleStateClick}>Click me! USESTATE</button>
     </>
   );
 };

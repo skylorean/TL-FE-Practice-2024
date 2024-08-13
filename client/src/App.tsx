@@ -17,14 +17,14 @@ import UseReducerExample from './useReducer/UseReducerExample';
 import Counter from './customHook/Counter';
 
 function App() {
-  // === UseContext ===
+  // === UseContext 3 ===
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
   // const toggleLogin = () => {
   //   setIsLoggedIn((prevLogin) => !prevLogin);
   // };
 
   // === Custom Hooks with unmount useEffect ===
-  // const [showTimer, setShowTimer] = useState(false);
+  const [showTimer, setShowTimer] = useState(false);
 
   return (
     <>
@@ -40,19 +40,20 @@ function App() {
         {/* <UseRefExample2 /> */}
         {/* <UseRefExample3 /> */}
 
-        {/* === UseContext ===  */}
+        {/* === UseContext 1 ===  */}
         {/* <Navigation /> */}
+        {/* === UseContext 2 ===  */}
         {/* <NavigationFixed /> */}
 
         {/* === useReducer === */}
         {/* <UseReducerExample /> */}
 
         {/* === Custom Hooks with unmount useEffect === */}
-        {/* {showTimer && <Counter />} */}
-        {/* <button onClick={() => setShowTimer((s) => !s)}>Toggle Timer</button> */}
+        {showTimer && <Counter />}
+        <button onClick={() => setShowTimer((s) => !s)}>Toggle Timer</button>
       </main>
 
-      {/* === UseContext ===  */}
+      {/* === UseContext 3 ===  */}
       {/* <UserContext.Provider value={{ isLoggedIn, toggleLogin }}>
         <main>
           <NavigationFixedBest />

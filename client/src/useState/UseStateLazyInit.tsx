@@ -13,7 +13,8 @@ function fac(num: number) {
 
 // Lazy initialization
 const UseStateLazyInit: FC = () => {
-  const [counter, setCounter] = useState(() => fac(10));
+  const [counter, setCounter] = useState(fac(10));
+  // const [counter, setCounter] = useState(() => fac(10));
 
   const increment = () => {
     setCounter(counter + 1);
